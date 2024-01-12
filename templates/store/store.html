@@ -122,8 +122,7 @@
     
     <header class="border-bottom mb-4 pb-3">
             <div class="form-inline">
-                <span class="mr-md-auto">{{products_count}} Items found </span>
-                
+                <span class="mr-md-auto">{{ products_count }} Items found </span>
             </div>
     </header><!-- sect-heading -->
     
@@ -134,18 +133,18 @@
                 <div class="card-body">
                     <div class="img-wrap"> 
                     
-                        <a href="{{ product.get_url }}"><img src="{{product.images.url}}" class="rounded"></a>
+                        <a href="{{ product.get_url }}"><img src="{{ product.images.url }}" class="rounded"></a>
                         
                     </div> <!-- img-wrap.// -->
                     <figcaption class="info-wrap">
                         <div class="fix-height">
-                            <a href="{{product.get_url}}" class="title">{{product.product_name}}</a>
-                            <small>{{product.stock}} Stocks Available</small>
+                            <a href="{{ product.get_url }}" class="title">{{ product.product_name }}</a>
+                            <small>{{ product.stock }} Stocks Available</small>
                             <div class="price-wrap mt-2">
-                                <span class="price">&#8377 {{product.price}}</span>
+                                <span class="price">&#8377 {{ product.price }}</span>
                             </div> <!-- price-wrap.// -->
                         </div>
-                        <a href="{% url 'add_cart' product.id %}" class="btn btn-block btn-primary">Add to cart </a>
+                        <a href="{{ product.get_url }}" class="btn btn-block btn-primary">View Details</a> <!--  {% url 'add_cart' product.id %} -->
                     </figcaption>
                 </div>
             </figure>
