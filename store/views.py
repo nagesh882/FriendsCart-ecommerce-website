@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse
 from store.models import Product
 from category.models import Category
 # from django.shortcuts import get_object_or_404
@@ -46,3 +47,7 @@ def product_details(request, category_slug, product_slug):
         'in_cart' : in_cart
     }
     return render(request, "store/product_detail.html", context)
+
+
+def search(request):
+    return render(request, 'store/product.html', context)
