@@ -68,8 +68,9 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            # messages.success(request, "You are now loged in.")
-            return redirect('home')
+            messages.success(request, "You are now loged in.")
+            # return redirect('home')
+            return redirect('dashbord')
         else:
             messages.error(request, "Invalid login credentials")
             return redirect('login')
@@ -98,3 +99,8 @@ def activate(request, uidb64, token):
     else:
         messages.error(request, 'Invalid activated link')
         return redirect('register')
+    
+
+def dashbord(request):
+    return render(request, 'accounts/dashbord.html')
+    # return HttpResponse("<h1 style='color:red;'>Dasbord Page</h1>")
