@@ -12,10 +12,10 @@ The project encompasses features such as user authentication, product browsing, 
 - **Backend**: Python, Django
 - **Database**: SQLite3
 - **Key Features**:
-  -- User Authentication: Users can sign up, log in, and manage their accounts securely.
-  -- Product Catalog: Products are organized into categories for easy browsing.
-  -- Product Search: Users can search for products using keywords.
-  -- Product Details: Detailed product pages with descriptions, images, and pricing.
-  -- Shopping Cart: Users can add products to their cart and manage quantities.
-  -- Checkout Process: Secure checkout process with options for shipping and payment.
-  -- Order History: Users can view their past orders and track current ones.
+  - User Authentication: Users can sign up, log in, and manage their accounts securely.
+  - Product Catalog: Products are organized into categories for easy browsing.
+  - Product Search: Users can search for products using keywords.
+  - Product Details: Detailed product pages with descriptions, images, and pricing.
+  - Shopping Cart: Users can add products to their cart and manage quantities.
+  - Checkout Process: Secure checkout process with options for shipping and payment.
+  - Order History: Users can view their past orders and track current ones.
