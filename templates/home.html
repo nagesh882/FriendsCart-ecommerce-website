@@ -8,7 +8,7 @@
 <div class="container">
 
 <div class="intro-banner-wrap">
-	<img src="{% static 'images/banners/1.jpg' %}" class="img-fluid rounded">
+	<img src="{% static 'images/banners/bannar.jpg' %}" width="100%" style="height:380px;" class="img-fluid rounded responsive">
 </div>
 
 </div> <!-- container //  -->
@@ -20,7 +20,7 @@
 <div class="container">
 
 <header class="section-heading">
-	<a href="./store.html" class="btn btn-outline-primary float-right">See all</a>
+	<a href="{% url 'store' %}" class="btn btn-outline-primary float-right">See all</a>
 	<h3 class="section-title">Popular products</h3>
 </header><!-- sect-heading -->
 
@@ -30,9 +30,9 @@
 	<div class="col-md-3">
 		<div class="card card-product-grid ">
 			<div class="card-body">
-				<a href="#" class="img-wrap"> <img src="{{product.images.url}}" class="rounded"> </a>
+				<a href="{{ product.get_url }}" class="img-wrap"> <img src="{{product.images.url}}" class="rounded"> </a>
 				<figcaption class="info-wrap">
-					<a href="./product-detail.html" class="title">{{product.product_name}}</a>
+					<a href="{{ product.get_url }}" class="title">{{product.product_name}}</a>
 					<small>{{product.stock}} Stocks Available</small>
 					<div class="price mt-1">&#8377; {{product.price}}</div> <!-- price-wrap.// -->
 				</figcaption>
